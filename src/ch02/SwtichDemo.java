@@ -61,4 +61,5 @@ public class SwtichDemo {
 		};
 		System.out.println(kind);
 	}
+
 }
