@@ -18,6 +18,12 @@ public class Hello4 {
 		// final를 붙이는 순간 상수가 됨
 		// P1 = 3.14000
 		System.out.println(PI);
+		subFunction();// 메서드 호출
 	}
 
+	public static void subFunction() {
+		// 메서드 선언 : x값(매개변수) 전달 받지 않은 함수
+		System.out.println("hello");
+
+	}
 }
