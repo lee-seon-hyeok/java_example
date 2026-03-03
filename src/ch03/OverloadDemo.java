@@ -27,6 +27,8 @@ public class OverloadDemo {
 		int num = 0;
 		int stack = 0;
 		int sum = 0;
+		String a;
+		String b;
 		Scanner money = new Scanner(System.in);
 		Scanner input = new Scanner(System.in);
 		while (true) {
@@ -34,12 +36,12 @@ public class OverloadDemo {
 			System.out.println("1. 예금 | 2. 출금 | 3. 잔고조회 | 4. 종료");
 			System.out.println("-------------------------------------");
 			System.out.print("선택 : ");
-			String a = input.nextLine();
+			a = input.nextLine();
 			num = Integer.parseInt(a);
 			switch (num) {
 			case 1:
 				System.out.print("예금액 > ");
-				String b = money.nextLine();
+				b = money.nextLine();
 				stack = Integer.parseInt(b);
 				sum += stack;
 				break;
