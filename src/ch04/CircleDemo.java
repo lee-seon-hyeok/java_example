@@ -5,14 +5,17 @@ public class CircleDemo {
 
 	public static void main(String[] args) {
 
-		Circle circle = new Circle();
+		// Circle circle = new Circle();
 		// circle -> 참조 변수 : circle로 주소을 지정 = Heap 영역에 가리킨 Circle() 객체 선언
 
-		System.out.println("원의 넓이는 " + circle.getArea() + "입니다.");
+		Circle circle2 = new Circle();
+		System.out.println("원의 반지름은" + circle2.getRadius());
+
+		// System.out.println("원의 넓이는 " + circle.getArea() + "입니다.");
 		// Circle 데이터를(넓이, 반지름 구함)를 가져옴
 
-		System.out.println("원의 반지름은" + circle.getRadius() + "입니다.");
-		circle.setRadius(5.0); // set -> 값을 변경함
+		// System.out.println("원의 반지름은" + circle.getRadius() + "입니다.");
+		// circle.setRadius(5.0); // set -> 값을 변경함
 		// get -> 값을 가져옴
 
 		// circle.radius = 5; // 참조 변수를 수정가능함

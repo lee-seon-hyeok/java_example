@@ -6,7 +6,7 @@ public class CatDemo {
 		Cat c1 = new Cat();
 		// 참조 변수 cat으로 4byte 확보 -> heap 영역에 Cat 객체 가리킴
 
-		Cat c2 = c1;// 참조변수 c2에 c1을 할당함
+		Cat c2 = c1;// 참조변수 : c2에 c1을 할당함, 값이 변경됨
 		Cat c3 = c2;
 
 		System.out.println("고양이의 이름은" + c1.name);
