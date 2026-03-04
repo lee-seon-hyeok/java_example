@@ -47,6 +47,7 @@ public class Circle {
 	static void staticMethod2() {
 
 	}
+
 //메서드
 
 }
