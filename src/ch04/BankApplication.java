@@ -16,15 +16,18 @@ public class BankApplication {
 					선택 >
 				"""; // """위치에 따라서 들여쓰기 위치가 달라짐
 		int money;
+		Account account = null;
+		// 계좌가 여러개 일 경우 -> 무한개 만들 수 있어서 동적 배열
 		while (true) {
 			System.out.println(template);// 밖에서 선언하여 메모리 낭비 줄임
 			menu = in.nextLine();
 			if (menu.equals("5"))
 				break; // 버튼 5번 누르면 빠져나옴
 			switch (menu) {
-			case "1" -> createAccount();// 함수로 리펙토링을 한다
+			case "1" -> createAccount(in, account);// 함수로 리펙토링을 한다
 			case "2" -> accoutInquiry();
 			case "3" -> depositProcess();
+			// 입력받아서 선언을 하면 메모리 낭비 -> 전체에 영향 끼친 in을 넘겨
 			case "4" -> System.out.println("출금 처리중...");
 			default -> System.out.println("메뉴 확인바랍니다."); // 기본 사항
 			}
@@ -32,8 +35,11 @@ public class BankApplication {
 		System.out.println("프로그램 종료");
 	}
 
-	static void createAccount() { // static 메서드는 static만 호출 -> 메인에서 호출하려면 static이 필요
+	static void createAccount(Scanner in, Account account) { // static 메서드는 static만 호출 -> 메인에서 호출하려면 static이 필요
 		System.out.println("계좌 생성 처리중...");
+		in.nextLine();
+		// account = new Account("111-111", "홍길동", 10000);
+		// menu로 입력받은 값을 계좌를 생성시킨다.
 	}
 
 	static void accoutInquiry() {
