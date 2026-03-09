@@ -1,7 +1,7 @@
 package ch04;
 
 //ch04에 있지만, public이어서 ch001 같은 다른 패키지에서도 가져올 수 있음
-public class Circle {
+public class Circle implements Comparable {
 	// 추가 요구사항 : 반지름이 10으로 생성되도록 생성자 추가하라
 	// 추가 요구사항2 : 생성하고 싶은 반지름을 매개변수로 전달하면 그 값을 이용하여 반지름을 생성하라
 	// 생성자 - 컴파일러가 자동으로 기본 생성자 만듬
@@ -41,10 +41,17 @@ public class Circle {
 		}
 	}
 
+//매서드
 	double getArea() { // getArea()메서드 반환
 		return PI * radius * radius;
 		// 넓이를 구하는 공식
 
 	}
-// 매서드
+
+	@Override
+	public int compareTo(Object o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }
