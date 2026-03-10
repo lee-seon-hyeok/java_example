@@ -8,7 +8,10 @@ public class Ex3_2 {
 		Triangle t2 = new Triangle(5, 10);
 
 		System.out.println(t1.compareTo(t2));
-
+		// 더블 클릭을 하면 중단점이 생긴다.
+		// 프로그램이 실행하다가 멈춘다.
+		// Variables에서 프로그램에 대한 내용 확인 가능
+		// step into, step over로 디버깅 확인함
 		int res = t1.compareTo(t2);
 		if (res == -999999) {
 			System.out.println("삼각각형과 비굑할 수 없는 객체입니다.");
