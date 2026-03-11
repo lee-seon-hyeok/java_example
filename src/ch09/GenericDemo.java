@@ -28,6 +28,12 @@ public class GenericDemo {
 		// Boricha boricha = (Boricha) beverage;
 		// 보리차로 타입변환
 		beverage2.drink();
+
+		genericMethod(100);
+	}
+
+	public static <T> void genericMethod(T data) {
+		System.out.println(data);
 	}
 
 }
@@ -48,6 +54,11 @@ class Cup<T> {
 		this.beverage = beverage;
 	}
 	// 제너릭로 바꾸려면 Object 자리를 T로 변경함
+
+	public <T> void any(T any) {
+
+	}
+
 }
 
 class Beverage {
