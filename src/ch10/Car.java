@@ -41,5 +41,8 @@ public class Car {
 
 	public static final List<Car> cars = Arrays.asList(
 			// 자동차의 리스트를 리스트와 배열로 만듬
-			new Car("소나타", true, 18, 210000), new Car("아반테", true, 10, 70000), new Car("싼타페", false, 18, 210000));
+			// 바뀌지 않은 변수
+			new Car("소나타", true, 18, 210000), new Car("아반테", true, 10, 70000), new Car("싼타페", false, 18, 210000),
+			new Car("K3", true, 5, 80000), new Car("테슬라", false, 1, 10000), new Car("쏘렌토", false, 1, 10000),
+			new Car("그랜저", false, 18, 10000));
 }
