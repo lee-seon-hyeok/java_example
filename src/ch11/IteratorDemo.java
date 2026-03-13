@@ -1,7 +1,9 @@
 package ch11;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
+import java.util.Iterator;
 
 public class IteratorDemo {
 
@@ -35,6 +37,22 @@ public class IteratorDemo {
 		list.add("c"); // a,b,c로 나오며 맨 뒤에서 데이터를 넣음
 		// collection의 자손으로 ArrayList, LinkedList에도 있는 공통 메서드가 존재하여 DIP 지킨다.
 		// 따라서 (인터페이스)를 부모로 의존해야 한다.
+
+		Collection<String> list1 = Arrays.asList("다람쥐", "개구리", "나비");
+		// Arrays로 가변 개수를 나열하여, 추상적인 것을 의존한다.
+
+		Iterator<String> iterator = list1.iterator();
+		// 처음 위치를 가리키는 iterator를 선언함
+		while (iterator.hasNext()) {
+			// 다음에 꺼낼 요소가 있는지 확인
+			System.out.println(iterator.next());
+			// hasNext()가 true일 경우에 다음 요소 값을 꺼내서 출력한다.
+		}
+
+		iterator = list1.iterator();
+		System.out.println(iterator.next());
+		// 이미 다 꺼냈는데, 스택에 언더플로우가 발생하여 오류가 발생 -> iterator를 다시 만들어서 next로 호출해서 다시 꺼내야 한다.
+
 	}
 
 }
